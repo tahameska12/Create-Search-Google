@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!--IE Compatibility Meta-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!--First Mobile Meta-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Search Google</title>
+    <link rel="stylesheet" href="./css/bootstrap.css" />
+    <link rel="stylesheet" href="./css/font-awesome.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./css/hover.css" />
+    <link rel="stylesheet" href="./css/animate.css" />
+    <link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Ubuntu|Lora" />
+    <!--[if lt IE 9]-->
+    <script src="./js/html5shiv.min.js"></script>
+    <script src="./js/respond.min.js"></script>
+    <!--[endif]-->
+  </head>
+  <body>
+
+    <div class="light-mode">
+      <i class="fa fa-sun-o fa-lg" aria-hidden="true" id="toggleDark"></i>
+  </div>
+
+    <div class="action">
+      <div class="profile" onclick="menueToggle();">
+        <img src="./assets/WhatsApp Image 2022-12-07 at 7.43.07 PM.jpeg">
+      </div>
+      <div class="menue">
+        <h3>Taha Meska<br><span>Web Design</span> </h3>
+        <ul>
+          <li><ion-icon name="person-circle-outline"></ion-icon><a href="#">My Profile</li></a>
+          <li><ion-icon name="create-outline"></ion-icon><a href="#">Edit Profile</li></a>
+          <li><ion-icon name="mail-outline"></ion-icon><a href="#">Inpox</li></a>
+          <li><ion-icon name="settings-outline"></ion-icon><a href="#">Settings</li></a>
+          <li><ion-icon name="help-circle-outline"></ion-icon></ion-icon><a href="#">Help</li></a>
+          <li><ion-icon name="log-out-outline"></ion-icon><a href="#">Logout</li></a>
+        </ul>
+      </div>
+     </div>
+
+
+
+    <section class="search-google">
+      <div class="container">
+
+        <img src="./assets/Google_logo_(2013-2015).svg.png">
+
+
+        <form action="" class="search-bar">
+          <ion-icon class="search" name="search-outline"></ion-icon> <input type="text" class="query"
+            placeholder="Search Google or Type a URL" name="q">
+          <ion-icon name="mic-sharp"></ion-icon>
+        </form>
+
+        <div class="button text-center">
+          <button class="searchBtn">Search Google</button>
+          <a href="https://www.google.com/doodles"> <button class="searchBtn">I'm Feeling Lucky</button></a>
+        </div>
+
+        <div class="ionicons-bar">
+          <div class="row">
+
+            <div class="col-lg-4">
+              <a href="https://www.cairo-airport.com/ar-eg/"> <ion-icon name="airplane"></ion-icon></a>
+              <br>
+              <span>Flight</span>
+            </div>
+        
+            <div class="col-lg-4">
+              <a href="https://www.facebook.com/"> <ion-icon name="logo-facebook"></ion-icon></a>
+              <br>
+              <span>facebook</span>
+            </div>
+
+            <div class="col-lg-4">
+              <a href="https://twitter.com/"> <ion-icon name="logo-twitter"></ion-icon></a>
+              <br>
+              <span>Twitter</span>
+            </div>
+
+            <div class="col-lg-4">
+              <a href="https://www.uber.com/eg/ar/"><ion-icon name="car"></ion-icon></a>
+              <br>
+              <span>Uber</span>
+            </div>
+            <div class="col-lg-4">
+              <a href="https://www.android.com/"></a><ion-icon name="logo-android"></ion-icon>
+              <br>
+              <span>Android</span>
+            </div>
+            <div class="col-lg-4">
+              <a href="https://github.com/"></a> <ion-icon name="logo-github"></ion-icon>
+              <br>
+              <span>Github</span>
+            </div>
+
+            <div class="col-lg-4">
+              <a href="https://www.hotels.com/"></a> <ion-icon name="bed"></ion-icon>
+              <br>
+              <span>Hotels</span>
+            </div>
+            <div class="col-lg-4">
+              <a href="https://org.events.com/"> <ion-icon name="calendar"></ion-icon></a>
+              <br>
+              <span>Events</span>
+            </div>
+            <div class="col-lg-4">
+              <ion-icon class="last" name="add"></ion-icon>
+              <br>
+              <span>More</span>
+            </div>
+
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+<script>
+  
+let query = document.querySelector('.query');
+let searchBtn = document.querySelector('.searchBtn');
+let search = document.querySelector('.search');
+
+searchBtn.onclick = function(){
+  let url = 'https://www.google.com/search?q='+query.value;
+  window.open(url,'_self');
+}
+
+search.onclick = function(){
+  let url = 'https://www.google.com/search?q='+query.value;
+  window.open(url,'_self');
+
+}
+
+function menueToggle(){
+  const toggleMenue = document.querySelector('.menue');
+  toggleMenue.classList.toggle('active')
+}
+
+const toggle = document.getElementById('toggleDark');
+const body = document.querySelector('body');
+
+toggle.addEventListener('click' , function(){
+  this.classList.toggle('fa-moon-o');
+  if(this.classList.toggle('fa-sun-o')){
+    body.style.background = 'white';
+    body.style.color = 'black';
+    body.style.transition = '2s';
+  }else{
+    body.style.background = 'black';
+    body.style.color = 'white';
+    body.style.transition = '2s';
+  }
+})
+
+</script> 
+
+    <script type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  </body>
+</html>
